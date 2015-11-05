@@ -44,9 +44,11 @@ def selectionSort(arr):
 				maxIndex = k
 				counter += 1
 
-		tempMin = arr[minIndex]
-		arr[minIndex] = arr[i]
-		arr[i] = tempMin
+		arr[minIndex], arr[i] = arr[i], arr[minIndex]
+
+		# tempMin = arr[minIndex]
+		# arr[minIndex] = arr[i]
+		# arr[i] = tempMin
 
 		tempMax = arr[maxIndex]
 		arr[maxIndex] = arr[len(arr)-1]
